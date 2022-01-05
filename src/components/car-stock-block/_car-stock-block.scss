@@ -1,0 +1,49 @@
+.car-stock-block {
+	background: $color-grey;
+	@media (min-width: $xl) {
+		padding-left: 90px;
+	}
+	.container-fluid {
+		padding: 0;
+	}
+	&__wrapper {
+		height: 100%;
+		padding: 24px 21px 31px 20px;
+		@media (min-width: $xl) {
+			padding: 89px 48px 82px 0;
+		}
+	}
+	&__title {
+		font-family: $font-LR-bold;
+		color: $color-white;
+		font-size: 18px;
+		letter-spacing: 0.9px;
+		text-transform: uppercase;
+		line-height: 18px;
+		margin-bottom: 10px;
+		@media (min-width: $md) {
+			font-size: 24px;
+			line-height: 24px;
+			margin-bottom: 24px;
+		}
+	}
+	&__text {
+		font-family: $font-family-second;
+		color: $bg-white2;
+		font-weight: normal;
+		letter-spacing: 0.28px;
+		line-height: 18px;
+		margin-bottom: 20px;
+		@media (min-width: $md) {
+			margin-bottom: 37px;
+		}
+	}
+	&__btn {
+		font-family: $font-family-second;
+		font-size: 10px;
+		font-weight: 750;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		line-height: 12px;
+	}
+}

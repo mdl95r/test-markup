@@ -1,0 +1,12 @@
+extends layouts/_default.pug
+include components/icons-block/_icons-block.pug
+include components/page-header/_page-header.pug
+include components/contacts/_contacts.pug
+
+block content
+	main.main
+		+page-header({
+			title: 'Контакты',
+		})
+		+contacts
+		+icons-block

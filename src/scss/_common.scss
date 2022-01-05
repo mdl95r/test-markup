@@ -1,0 +1,63 @@
+.button {
+    color: $color-white;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 16px 23px;
+    border: 1px solid $color-black;
+    background: $color-black;
+    &:hover {
+        color: $color-black;
+        background: $bg-white2;
+        transition: .3s;
+    }
+    &__link {
+        position: relative;
+        font-family: $font-family-second;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        line-height: 12px;
+        padding-left: 20px;
+        &:after {
+            display: block;
+            position: absolute;
+            top: 3px;
+            left: 0px;
+            transform: rotate(45deg);
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-top: 1px solid $color-black;
+            border-right: 1px solid $color-black;
+        }
+    }
+    &_white {
+        color: $color-black;
+        border: none;
+        background: $color-white;
+        &:hover {
+            color: $color-white;
+            background: $color-black;
+            transition: .3s;
+        }
+    }
+}
+
+section h2 {
+    font-family: $font-LR-bold;
+    font-size: 26px;
+    letter-spacing: 1.9px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 26px;
+    padding: 0 15px;
+    @media (min-width: $lg) {
+        font-size: 38px;
+        line-height: 38px;
+    }
+}
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+}

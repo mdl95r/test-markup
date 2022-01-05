@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "LandRover-Demi";
+    src: url("../fonts/LandRover-Demi.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+	font-display: swap;
+}
+
+@font-face {
+    font-family: "LandRover-Bold";
+    src: url("../fonts/LandRover-Bold.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    
+}
+
+@font-face {
+    font-family: "AvenirNextCyr";
+    src: url("../fonts/AvenirNextCyr-Regular.woff2") format("woff2"),
+    url("../fonts/AvenirNextCyr-Regular.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+	font-display: swap;
+}
+
+@font-face {
+    font-family: "AvenirNextCyr";
+    src: url("../fonts/AvenirNextCyr-Demi.woff2") format("woff2"),
+    url("../fonts/AvenirNextCyr-Demi.woff") format("woff");
+    font-style: normal;
+    font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+    font-family: "AvenirNextCyr";
+    src: url("../fonts/AvenirNextCyr-Bold.woff2") format("woff2"),
+    url("../fonts/AvenirNextCyr-Bold.woff") format("woff");
+    font-style: normal;
+    font-weight: 700;
+	font-display: swap;
+}

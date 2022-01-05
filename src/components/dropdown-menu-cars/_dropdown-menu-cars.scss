@@ -1,0 +1,161 @@
+.dropdown-menu {
+	&__list-cars {
+		@media (min-width: $xl) {
+			position: relative;
+			z-index: 1000;
+			flex-shrink: 0;
+			width: 390px;
+			background: $color-white;
+			box-shadow: 0px 1px 4px $rgba-background;
+		}
+	}
+	&__cars-wrap {
+		@media (min-width: $md) {
+			display: flex;
+			box-shadow: 1px 0px 4px $rgba-background;
+		}
+		@media (min-width: $xl) {
+			height: 100%;
+		}
+	}
+	&__car-desc {
+		padding: 16px 20px;
+		border-bottom: 1px solid $color-grey3;
+		@media (min-width: $sm) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		@media (min-width: $lg) {
+			padding: 0 0 50px;
+			margin: 30px 30px 0;
+		}
+		.container {
+			max-width: none;
+			padding: 0;
+		}
+		h3 {
+			font-size: 18px;
+			font-weight: bold;
+			letter-spacing: 0.9px;
+			text-transform: uppercase;
+			line-height: 18px;
+			margin-bottom: 3px;
+		}
+		span {
+			font-family: $font-family-second;
+			color: $color-grey;
+			font-size: 10px;
+			font-weight: 450;
+			letter-spacing: 0.72px;
+			text-transform: uppercase;
+			line-height: 12px;
+		}
+	}
+	&__car-disclaimer {
+		display: none;
+		padding: 0 32px 36px 30px;
+		@media (min-width: $md) {
+			display: block;
+		}
+		p {
+			color: $color-grey;
+			font-size: 10px;
+			font-weight: 450;
+			letter-spacing: 0.72px;
+			line-height: 12px;
+		}
+	}
+	&__car-subtitle {
+		font-family: $font-family-second;
+		color: $color-grey;
+		font-weight: 450;
+		letter-spacing: 0.28px;
+		line-height: 18px;
+		margin-bottom: 10px;
+		@media (min-width: $sm) {
+			margin-bottom: 0;
+		}
+	}
+	&__car-price {
+		font-family: $font-family-second;
+		color: $color-black;
+		font-size: 20px;
+		font-weight: 750;
+		line-height: 23px;
+		margin-top: 5px;
+		span {
+			font: inherit;
+			font-family: Arial;
+			margin-left: 4px;
+		}
+	}
+	&__car-links {
+		padding: 20px 16px 26px;
+		@media (min-width: $xl) {
+			padding: 30px;
+		}
+		li {
+			&:not(:last-child) {
+				margin-bottom: 17px;
+			}
+		}
+		a {
+			&:after {
+				border-color: $color-green;
+			}
+		}
+	}
+	&__car-stock {
+		padding: 0 0 25px 20px;
+		a {
+			display: inline-block;
+			font-family: $font-family-second;
+			font-size: 10px;
+			font-weight: 750;
+			letter-spacing: 3px;
+			line-height: 12px;
+			margin-top: 10px;
+		}
+	}
+	&__model-infos {
+		display: none;
+		@media (min-width: $md) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			padding: 10px;
+		}
+		@media (min-width: $lg) {
+			padding: 35px 59px 36px;
+		}
+	}
+	&__model-info {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		svg {
+			width: 28px;
+			height: 28px;
+			margin-bottom: 16px;
+		}
+		span {
+			font-family: $font-family-second;
+			color: $color-grey;
+			font-size: 10px;
+			font-weight: 450;
+			letter-spacing: 0.72px;
+			line-height: 12px;
+		}
+	}
+	&__other-info {
+		@media (min-width: $md) {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+		}
+		@media (min-width: $xl) {
+			width: 300px;
+		}
+	}
+}

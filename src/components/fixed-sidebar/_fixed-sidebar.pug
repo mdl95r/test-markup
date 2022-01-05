@@ -1,0 +1,27 @@
+-
+	const buttons = [
+		{
+			icon: "repair",
+			title: "запись на сервис"
+		},
+		{
+			icon: "car",
+			title: "конфигуратор"
+		},
+		{
+			icon: "rudder",
+			title: "заказ тест-драйва"
+		},
+		{
+			icon: "car2",
+			title: "автомобили в наличии"
+		},
+	]
+
+div(block="fixed-sidebar")
+	each button,i in buttons
+		a.js-fixed-sidebar-trigger(href=`#${i+1}` elem="item")
+			div.js-fixed-sidebar-hidden(elem="hidden-part")
+				span #{button.title}
+			div(elem="showed-part")
+				+svg(button.icon)

@@ -1,0 +1,61 @@
+.dealer-block {
+	padding-top: 33px;
+	padding-bottom: 33px;
+	background: $bg-white2;
+	@media (min-width: $xl) {
+		padding: 60px 280px 62px;
+	}
+	&__title {
+		margin-bottom: 28px;
+	}
+	&__subtitle {
+		display: block;
+		font-family: $font-family-second;
+		font-weight: 450;
+		letter-spacing: 0.34px;
+		text-align: center;
+		line-height: 18px;
+		margin-bottom: 29px;
+		@media (min-width: $xl) {
+			font-size: 18px;
+			font-weight: 300;
+			letter-spacing: 0.26px;
+			line-height: 23px;
+		}
+	}
+	&__text {
+		margin-bottom: 29px;
+		@media (min-width: $xl) {
+			margin-bottom: 43px;
+		}
+		p {
+			font-family: $font-family-second;
+			color: $color-grey;
+			font-weight: normal;
+			letter-spacing: 0.28px;
+			line-height: 18px;
+			&:not(:last-child) {
+				margin-bottom: 25px;
+			}
+		}
+	}
+	&__buttons-wrap {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	&__btn {
+		font-family: $font-family-second;
+		font-size: 10px;
+		font-weight: 750;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		line-height: 12px;
+		margin-bottom: 21px;
+	}
+	&__btn-link {
+		&:after {
+			border-color: $color-green;
+		}
+	}
+}

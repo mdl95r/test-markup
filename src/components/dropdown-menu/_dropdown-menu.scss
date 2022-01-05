@@ -1,0 +1,324 @@
+.dropdown-menu {
+	position: fixed;
+	top: 50px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+    transform: translateX(9999px);
+	width: 100%;
+	overflow-y: auto;
+	background: $color-white;
+	transition: .2s;
+	@media (min-width: $xl) {
+		top: 102px;
+		bottom: auto;
+		transform: translateY(-2000px);
+		box-shadow: 0px 1px 4px $rgba-background;
+		transition: .4s;
+	}
+	&_active {
+		transform: translateX(0);
+		transition: .2s;
+		@media (min-width: $xl) {
+			position: absolute;
+			transform: translateY(0);
+			transition: .5s;
+		}
+	}
+	&_hidden {
+		overflow-x: hidden;
+	}
+	&__back-btn {
+		position: relative;
+		width: 100%;
+		min-height: 50px;
+		font-family: $font-family-second;
+		color: $color-black;
+		font-size: 11px;
+		font-weight: 450;
+		letter-spacing: 1.37px;
+		text-align: center;
+		text-transform: uppercase;
+		line-height: 14px;
+		padding: 18px;
+		background: $bg-white;
+		&:after {
+			display: block;
+			position: absolute;
+			top: 20px;
+			left: 17px;
+			transform: rotate(225deg);
+			content: "";
+			width: 8px;
+			height: 8px;
+			border-top: 1px solid $color-black;
+			border-right: 1px solid $color-black;
+		}
+		@media (min-width: $xl) {
+			display: none;
+		}
+	}
+	&__close-btn {
+		display: none;
+		@media (min-width: $xl) {
+			display: block;
+			position: absolute;
+			top: 11px;
+			right: 14px;
+			z-index: 500;
+			width: 30px;
+			height: 30px;
+			svg {
+				width: 15px;
+				height: 15px;
+			}
+		}
+	}
+	&__dropdown-menu-items {
+		&_hidden {
+			position: fixed;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			overflow-y: hidden;
+			@media (min-width: $xl) {
+				display: flex;
+				position: static;
+			}
+		}
+	}
+	&__submenu-title, 
+	&__link-item {
+		display: block;
+		position: relative;
+		font-family: $font-family-second;
+		color: $color-grey;
+		font-size: 12px;
+		font-weight: 750;
+		letter-spacing: 1.73px;
+		text-transform: uppercase;
+		line-height: 14px;
+		padding: 18px 0 21px 17px;
+		border-bottom: 1px solid #ccc;
+		cursor: pointer;
+		@media (min-width: $xl) {
+			padding: 0;
+			border-bottom: none;
+		}
+		&:after {
+			display: block;
+			position: absolute;
+			top: 19px;
+			right: 20px;
+			transform: rotate(45deg);
+			content: "";
+			width: 8px;
+			height: 8px;
+			border-top: 1px solid $color-black;
+			border-right: 1px solid $color-black;
+			@media (min-width: $xl) {
+				display: none;
+			}
+		}
+	}
+	&__submenu-title {
+		@media (min-width: $xl) {
+			margin-bottom: 30px;
+		}
+	}
+	&__link-item {
+		font-size: 10px;
+		font-weight: 600;
+		&:after {
+			display: none;
+		}
+	}
+	&__link-wrap {
+		display: flex;
+		position: relative;
+        &:after {
+            display: block;
+            position: absolute;
+			top: 34px;
+			right: 17px;
+            transform: rotate(45deg);
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-top: 1px solid $color-green;
+            border-right: 1px solid $color-green;
+			@media (min-width: $xl) {
+				display: none;
+			}
+        }
+	}
+	&__thumb-wrap {
+		display: flex;
+		@media (min-width: $xl) {
+			flex-direction: column;
+		}
+	}
+	&__content {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 300;
+		transform: translateX(-2500px);
+		width: 100%;
+		overflow-y: auto;
+		background: $color-white;
+		transition: .2s;
+		&_active {
+			transform: translateX(0);
+			transition: .2s;
+		}
+		@media (min-width: $xl) {
+			position: absolute;
+			&_active {
+				position: relative;
+			}
+		}
+		li {
+			@media (min-width: $xl) {
+				&:not(:last-child) {
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+	&__item-info,
+	&__about-info {
+		width: 100%;
+		padding: 20px 35px 19px 17px;
+		border-bottom: 1px solid $color-grey3;
+		p {
+			font-size: 12px;
+			font-weight: 600;
+			letter-spacing: 0.7px;
+			text-transform: uppercase;
+			line-height: 14px;
+		}
+		span {
+			font-family: $font-family-second;
+			color: $color-grey;
+			font-size: 11px;
+			font-weight: normal;
+			letter-spacing: 0.267143px;
+			line-height: 14px;
+			@media (min-width: $xl) {
+				display: none;
+			}
+		}
+	}
+	&__dropdown-list {
+		@media (min-width: $xl) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+	&__item-info {
+		@media (min-width: $xl) {
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__about-info {
+		@media (min-width: $xl) {
+			justify-content: center;
+			padding: 0;
+			margin-top: 23px;
+			border: none;
+		}
+		p {
+			color: $color-grey;
+			font-size: 10px;
+			letter-spacing: 1.73px;
+		}
+	}
+	&__list-wrap,
+	&__dropdown-list {
+		@media (min-width: $xl) {
+			padding: 71px 45px 65px 89px;
+		}
+	}
+	&__list-wrap .dropdown-menu__content {
+		@media (min-width: $xl) {
+			position: static;
+			transform: none;
+			overflow: auto;
+		}
+	}
+	&__main-info {
+		flex-shrink: 0;
+		box-shadow: 1px 0px 4px $rgba-background;
+		@media (min-width: $md) {
+			width: 445px;
+		}
+		@media (min-width: $lg) {
+			width: 590px;
+		}
+		@media (min-width: $xl) {
+			width: auto;
+			flex-shrink: 1;
+			max-width: 590px;
+		}
+	}
+	&__thumb-item {
+		@media (min-width: $xl) {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			width: 17%;
+			text-align: center;
+			margin-bottom: 48px;
+			&:not(:nth-child(5n+5)) {
+				margin-right: 31px;
+			}
+		}
+	}
+	&__offers-icons {
+		@media (min-width: $xl) {
+			padding: 54px 0 57px;
+			border-top: 1px solid $color-grey3;
+		}
+	}
+	&__offers-icon {
+		width: 20px;
+		height: 20px;
+		margin-right: 20px;
+		fill: $color-grey;
+		@media (min-width: $xl) {
+			width: 40px;
+			height: 40px;
+			margin: 0;
+		}
+	}
+	&__icons-wrap {
+		display: flex;
+		padding: 18px 0 21px 17px;
+		border-bottom: 1px solid $color-grey3;
+		@media (min-width: $xl) {
+			align-items: center;
+			flex-direction: column;
+			padding: 0;
+			border: none;
+		}
+		&:hover .dropdown-menu__offers-icon {
+			fill: $color-green;
+		}
+	}
+	&__icon-title {
+		font-family: $font-family-second;
+		font-size: 10px;
+		font-weight: 600;
+		letter-spacing: 1.73px;
+		text-transform: uppercase;
+		line-height: 20px;
+		@media (min-width: $xl) {
+			line-height: 14px;
+			margin-top: 24px;
+		}
+	}
+}

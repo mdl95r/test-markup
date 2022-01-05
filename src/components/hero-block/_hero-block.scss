@@ -1,0 +1,103 @@
+.hero-block {
+	position: relative;
+	&__info {
+		text-align: center;
+		padding: 18px 21px 40px;
+		background: $color-white;
+		@media (min-width: $md) {
+			position: absolute;
+			top: 50%;
+			left: 64px;
+			transform: translateY(-50%);
+			max-width: 350px;
+			text-align: left;
+			padding: 18px 26px 26px 24px;
+		}
+		&-title {
+			padding: 0;
+			margin-bottom: 10px;
+			@media (min-width: $md) {
+				text-align: left;
+			}
+			br {
+				display: none;
+				@media (min-width: $md) {
+					display: block;
+				}
+			}
+		}
+		&-subtitle {
+			text-transform: uppercase;
+		}
+		&-btn {
+			min-width: 139px;
+			font-size: 10px;
+			letter-spacing: 3px;
+			margin-top: 19px;
+		}
+	}
+	&__arrow-down {
+		display: none;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		z-index: 1;
+		transform: translateX(-50%);
+		width: 50px;
+		height: 50px;
+		padding: 0;
+		@media (min-width: $md) {
+			display: block;
+		}
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+		&:hover {
+			background: $color-black;
+		}
+	}
+	.swiper-pagination {
+		display: flex;
+		justify-content: center;
+    	align-items: baseline;
+		bottom: 205px;
+		z-index: 1;
+		height: 35px;
+		@media (min-width: $md) {
+			justify-content: start;
+			bottom: 19px;
+			left: 90px;
+			width: auto;
+		}
+	}
+	.swiper-pagination-bullet {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		width: 30px;
+		height: 100%;
+		color: $color-white;
+		font-size: 18px;
+		margin: 0 !important;
+		background: transparent;
+		outline: none;
+		transition: .3s;
+		-webkit-tap-highlight-color: transparent;
+		@media (min-width: $md) {
+			font-size: 24px;
+		}
+		&-active {
+			width: 30px;
+			font-size: 31px;
+			margin: 0 !important;
+			transition: .3s;
+			@media (min-width: $md) {
+				font-size: 42px;
+			}
+		}
+	}
+	.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+		opacity: .5;
+	}
+}

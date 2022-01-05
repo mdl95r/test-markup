@@ -1,0 +1,87 @@
+.news-block {
+	padding-bottom: 35px;
+	background: $bg-white;
+	.container-fluid {
+		@media (min-width: $xl) {
+			padding: 0px 90px;
+		}
+	}
+	@media (min-width: $xl) {
+		padding-bottom: 59px;
+	}
+	.col-md-3 {
+		padding: 0 20px;
+	}
+	.swiper-pagination {
+		position: relative;
+		margin-top: 30px;
+	}
+	.swiper-pagination-bullet {
+		width: 10px;
+		height: 10px;
+		margin: 0;
+		border: 2px solid $color-black;
+		border-radius: 100%;
+		background: transparent;
+		opacity: 1;
+		@media (min-width: $lg) {
+			display: none;
+		}
+		&:not(:last-child) {
+			margin-right: 22px;
+		}
+		&-active {
+			background: $color-black;
+		}
+	}
+	&__title {
+		margin-bottom: 28px;
+		@media (min-width: $lg) {
+			padding-top: 60px;
+			margin-bottom: 56px;
+		}
+	}
+	&__list {
+		@media (min-width: $lg) {
+			justify-content: space-around;
+		}
+	}
+	&__item {
+		width: 193px;
+		@media (min-width: $xl) {
+			width: 245px;
+		}
+		&-img {
+			margin-bottom: 21px;
+			@media (min-width: $lg) {
+				margin-bottom: 25px;
+			}
+		}
+		&-title {
+			font-family: $font-LR-bold;
+			font-size: 15px;
+			letter-spacing: 0.75px;
+			text-transform: uppercase;
+			line-height: 18px;
+			margin-bottom: 8px;
+			@media (min-width: $lg) {
+				font-size: 18px;
+				letter-spacing: 1px;
+				line-height: 18px;
+				margin-bottom: 30px;
+			}
+		}
+		&-text {
+			font-family: $font-family-second;
+			color: $color-grey;
+			letter-spacing: 0.28px;
+			line-height: 18px;
+			margin-bottom: 20px;
+		}
+		&-btn {
+			&:after {
+				border-color: $color-green;
+			}
+		}
+	}
+}

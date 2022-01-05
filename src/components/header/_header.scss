@@ -1,0 +1,319 @@
+.header {
+	position: fixed;
+	top: 0;
+	z-index: 10000;
+	width: 100%;
+	min-height: 50px;
+	line-height: 14px;
+	&__wrapper {
+		position: relative;
+		width: 100%;
+		padding: 6px 0 9px 12px;
+		background: $color-white;
+		box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1);
+		@media (min-width: $xl) {
+			z-index: 1000;
+			padding: 19px 26px 13px;
+		}
+	}
+	&__logo {
+		@media (min-width: $xl) {
+			margin-right: 25px;
+		}
+		img {
+			width: 56px;
+			margin-top: 6px;
+			@media (min-width: $lg) {
+				width: 60px;
+			}
+			@media (min-width: $xl) {
+				width: max-content;
+			}
+		}
+	}
+	&__dealer-name {
+		color: $color-black;
+		font-size: 12px; 
+		font-weight: 600;
+		letter-spacing: 1px;
+		text-align: center;
+		text-transform: uppercase;
+		margin-top: 6px;
+		margin-right: 50px;
+		@media (min-width: $xl) {
+			font-size: 14px;
+			text-align: left;
+			margin-top: 0;
+			margin-right: 0;
+		}
+	}
+	&__contacts-list {
+		@media (min-width: $md) {
+			display: flex;
+		}
+	}
+	&__contacts-item {
+		font-family: $font-family-second;
+		color: $color-grey;
+		font-size: 11px;
+		font-weight: normal;
+		letter-spacing: .3px;
+		&:not(:last-child) {
+			margin-right: 62px;
+		}
+		p {
+			font-family: $font-family-second;
+			color: $color-grey;
+			font-size: 11px;
+			font-weight: normal;
+			letter-spacing: .3px;
+			line-height: 14px;
+		}
+	}
+	&__lang-toogle {
+		display: none;
+		font-family: $font-family-second;
+		color: $color-black;
+		font-size: 10px;
+		font-weight: 600;
+		letter-spacing: 1.7px;
+		text-transform: uppercase;
+		@media (min-width: $xl) {
+			display: block;
+			position: absolute;
+			top: 21px;
+			right: 24px;
+		}
+	}
+	&__nav-menu {
+		@media (min-width: $xl) {
+			padding-left: 106px;
+			margin-top: -2px;
+		}
+	}
+	&__list-items {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__list-item {
+		&:not(:last-child) {
+			margin-right: 19px;
+		}
+		@media (min-width: $xl) {
+			&:not(:last-child) {
+				margin: 0 10px 2px 0;
+			}
+		}
+	}
+	&__list-link {
+		font-family: $font-family-second;
+		color: $color-black;
+		font-size: 8px;
+		font-weight: 600;
+		letter-spacing: 1.73px;
+		text-transform: uppercase;
+		@media (min-width: $xl) {
+			font-size: 10px;
+			padding: 14px 9px 18px;
+			&_active {
+				color: $color-black;
+				background: $bg-white;
+				transition: .2s;
+				&:after {
+					display: none;
+				}
+			}
+		}
+		&_dropdown {
+			&:after {
+				display: block;
+				position: absolute;
+				top: 19px;
+				right: 20px;
+				transform: rotate(45deg);
+				content: "";
+				width: 8px;
+				height: 8px;
+				border-top: 1px solid $color-black;
+				border-right: 1px solid $color-black;
+			}
+			@media (min-width: $xl) {
+				&:after {
+					display: none;
+				}
+			}
+		}
+		&_active {
+			color: $color-green;
+			background: $bg-white2;
+			&:after {
+				border-color: $color-green;
+			}
+		}
+	}
+	&__list-icons {
+		@media (min-width: $xl) {
+			display: flex;
+			padding-right: 0 !important;
+		}
+	}
+	&__list-icon {
+		@media (min-width: $xl) {
+			display: inline-block;
+		}
+		&:not(:last-child) {
+			margin-right: 18px;
+		}
+		width: 18px;
+		height: 18px;
+	}
+	&__burger-btn {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50px;
+		height: 50px;
+		@media (min-width: $xl) {
+			display: none;
+		}
+		&:before {
+			position: absolute;
+			top: 19px;
+			left: 17px;
+			content: '';
+			width: 16px;
+			height: 16px;
+			border: 2px solid $color-black;
+			border-right: 0;
+			border-left: 0;
+			transition: .3s;
+		}
+	
+		&:after {
+			position: absolute;
+			top: 26px;
+			left: 17px;
+			content: '';
+			width: 16px;
+			border-top: 2px solid $color-black;
+			transition: .3s;
+		}
+	
+		&_active {
+			background: $bg-white;
+			&:before {
+				position: absolute;
+				top: 24px;
+				left: 18px;
+				transform: rotate(45deg);
+				content: '';
+				width: 16px;
+				height: 0;
+				border-bottom: 0;
+				transition: .2s;
+			}
+		
+			&:after {
+				position: absolute;
+				top: 24px;
+				left: 18px;
+				transform: rotate(-45deg);
+				content: '';
+				width: 16px;
+				height: 0;
+				transition: .2s;
+			}
+		}
+	}
+	&__mob-menu {
+		display: block;
+		position: fixed;
+		top: 50px;
+		bottom: 0;
+		left: 0;
+		transform: translateX(-5000px); 
+		width: 100%;
+		overflow-x: hidden;
+		overflow-y: auto;
+		background: $color-white;
+		transition: .4s;
+		@media (min-width: $xl) {
+			display: none;
+		}
+		&_active {
+			transform: translateX(0);
+			transition: .2s;
+		}
+		.header {
+			&__list-items {
+				display: block;
+			}
+			&__list-item {
+				margin-right: 0;
+			}
+			&__list-link {
+				display: block;
+				position: relative;
+				font-size: 10px;
+				padding: 18px 20px 21px 17px;
+				border-bottom: 1px solid $bg-white3;
+			}
+			&__contacts-list {
+				display: block;
+				width: 100%;
+				background: $bg-white2;
+			}
+			&__contacts-item {
+				position: relative;
+				border-bottom: 1px solid $bg-white3;
+				&:not(:last-child) {
+					margin-right: 0;
+				}
+				a {
+					padding: 15px 15px 16px 17px;
+					margin: 0 !important;
+				}
+				span {
+					font-size: 14px;
+				}
+				p {
+					font-size: 14px; 
+					margin-bottom: 5px;
+				}
+			}
+			&__phone-icon {
+				width: 21px;
+				height: 21px;
+			}
+			&__list-icon {
+				width: 21px;
+				height: 21px;
+			}
+			&__list-icons {
+				li {
+					border-bottom: 1px solid $bg-white;
+				}
+				a {
+					display: flex;
+					align-items: center;
+					padding: 15px 34px 13px 16px;
+				}
+				span {
+					font-size: 10px;
+					font-weight: 600;
+					letter-spacing: 1.73px;
+					text-transform: uppercase;
+					line-height: 14px;
+				}
+			}
+			&__lang-toogle {
+				display: block;
+				padding: 17px 34px 19px 17px;
+				@media (min-width: $xl) {
+					display: none;
+				}
+			}
+		}
+	}
+}

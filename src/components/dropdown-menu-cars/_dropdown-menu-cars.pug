@@ -1,0 +1,41 @@
+mixin dropdown-menu-cars(data)
+	-
+		const {cars, iconsInfo} = data;
+	div(elem="menu-lev-3")
+		each itemCar, i in cars
+			div(elem="content" data-submenu-lev3=i)
+				button.js-lev3-back-btn(elem="back-btn") #{itemCar.name}
+				div(elem="cars-wrap")
+					div(elem="main-info")
+						picture
+							source(media="(min-width: 768px)" srcset='img/resources/cars/image20_590px.jpg')
+							img(elem="car-img" src='img/resources/cars/image20_900px.jpg', srcset='img/resources/cars/image20_1800px.jpg 2x' alt="")
+						div(elem="car-desc")
+							.container
+								.row.no-gutters
+									.col-xl-8
+										div(elem="car-desc-wrap")
+											h3 #{itemCar.name}
+											p(elem="car-subtitle") #{itemCar.subTitle}
+									if itemCar.price
+										.col-xl-4
+											div(elem="car-price-wrap")
+												span Цена от:
+												p(elem="car-price") #{itemCar.price}
+													span ₽
+						div(elem="model-infos")
+							each iconInfo in iconsInfo
+								div(elem="model-info")
+									+svg(iconInfo.icon)
+									span !{iconInfo.title}
+					div(elem="other-info")
+						div(elem="car-links-wrap")
+							ul(elem="car-links")
+								each linkItem in itemCar.links
+									li
+										a(href="#").button__link #{linkItem}
+							div(elem="car-stock")
+								a.button(href="#") автомобили в наличии
+						if itemCar.disclr
+							div(elem="car-disclaimer")
+								p <sup>1</sup> #{itemCar.disclr}

@@ -1,0 +1,20 @@
+mixin hero-block
+	- let i = 1
+	section(block="hero-block") 
+		.swiper-container
+			.swiper-wrapper
+				while (i <= 4)
+					.swiper-slide
+						div(elem="item")
+							picture
+								source(media="(min-width: 900px)" srcset="img/resources/hero/hero.jpg")
+								source(media="(min-width: 600px)" srcset="img/resources/hero/hero_900.jpg")
+								img(elem="img" srcset="img/resources/hero/hero_900.jpg, img/resources/hero/hero_1800.jpg 2x" alt="")
+							div(elem="info")
+								h2(elem="info-title") НОВЫЙ <br> LAND ROVER DEFENDER
+								p(elem="info-subtitle") способен на многое
+								button.button(elem="info-btn") подробнее
+					- i++
+			.swiper-pagination
+		button.button.js-hero-down(elem="arrow-down")
+			+svg('down-arrow')

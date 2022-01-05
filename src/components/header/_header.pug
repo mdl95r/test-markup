@@ -1,0 +1,103 @@
+include ../dropdown-menu/_dropdown-menu.pug
+
+header(block="header")
+	div(elem="wrapper")
+		.container-fluid
+			.row.d-flex.align-items-md-center.align-items-xl-start
+				div(elem="logo")
+					img(src="img/logo.png", srcset="img/logo-2x.png 2x" alt="")
+				.col.col-xl-2.align-self-center.align-self-xl-start
+					div(elem="dealer-name") длинное название дилера
+
+				.d-none.d-xl-block.col-md-8.col-lg-8.ml-xl-3
+					ul(elem="contacts-list")
+						li(elem="contacts-item")
+							p Москва, МКАД 18 км (внешняя сторона)
+							a(href="#") +7 (495) 126-63-96
+						li(elem="contacts-item")
+							p Москва, МКАД 47 км (внешняя сторона)
+							a(href="#") +7 (495) 126-64-08
+						li(elem="contacts-item")
+							p Москва, Новорижское ш., 9 км от МКАД
+							a(href="#") +7 (495) 126-63-86
+				a(elem="lang-toogle" href="#") EN
+
+				.col-lg-8.col-xl-10.d-none.d-xl-flex
+					nav(elem="nav-menu")
+						ul(elem="list-items")
+							li(elem="list-item")
+								a.js-dropdown-menu(elem="list-link" mod="dropdown" href="#" data-menu-item="0") Автомобили
+							li(elem="list-item")
+								a(elem="list-link" href="#") В наличии
+							li(elem="list-item")
+								a.js-dropdown-menu(elem="list-link" mod="dropdown" href="#" data-menu-item="1") Предложения
+							li(elem="list-item")
+								a.js-dropdown-menu(elem="list-link" href="#") Продать
+							li(elem="list-item")
+								a.js-dropdown-menu(elem="list-link" mod="dropdown" href="#" data-menu-item="2") Владельцам
+							li(elem="list-item")
+								a.js-dropdown-menu(elem="list-link" mod="dropdown" href="#" data-menu-item="3") О нас
+							li(elem="list-item")
+								a(elem="list-link" href="#") ссылка дилера
+				button(elem="burger-btn").js-burger-btn
+
+				.d-none.d-xl-flex.col-md-2.justify-content-end(elem="list-icons")
+					each icon in ['best-dealer', 'sv-logo', 'map-pin', 'search']
+						+svg(icon)(elem="list-icon")
+
+				div(elem="mob-menu").js-mob-menu
+					nav(elem="nav-menu")
+						ul(elem="list-items")
+							li(elem="list-item")
+								a.js-dropdown-menu(elem="list-link" mod="dropdown" href="#" data-menu-item="0") Автомобили
+							li(elem="list-item")
+								a(elem="list-link" href="#") В наличии
+							li(elem="list-item")
+								a.js-dropdown-menu(elem="list-link" mod="dropdown" href="#" data-menu-item="1") Предложения
+							li(elem="list-item")
+								a.js-dropdown-menu(elem="list-link" href="#") Продать
+							li(elem="list-item")
+								a.js-dropdown-menu(elem="list-link" mod="dropdown" href="#" data-menu-item="2") Владельцам
+							li(elem="list-item")
+								a.js-dropdown-menu(elem="list-link" mod="dropdown" href="#" data-menu-item="3") О нас
+							li(elem="list-item")
+								a(elem="list-link" href="#") ссылка дилера
+					
+					ul(elem="contacts-list")
+						li(elem="contacts-item")
+							a.row.align-items-center.no-gutters(href="#")
+								.col.pr-2
+									p Москва, МКАД 18 км (внешняя сторона)
+									span +7 (495) 126-63-96
+								.col-auto
+									+svg('phone')(elem="phone-icon")
+						li(elem="contacts-item")
+							a.row.align-items-center.no-gutters(href="#")
+								.col.pr-2
+									p Москва, МКАД 47 км (внешняя сторона)
+									span +7 (495) 126-64-08
+								.col-auto
+									+svg('phone')(elem="phone-icon")
+						li(elem="contacts-item")
+							a.row.align-items-center.no-gutters(href="#")
+								.col.pr-2
+									p Москва, Новорижское ш., 9 км от МКАД
+									span +7 (495) 126-63-86
+								.col-auto
+									+svg('phone')(elem="phone-icon")
+
+					ul(elem="list-icons")
+						li
+							a(href="#")
+								+svg('map-pin')(elem="list-icon")
+								span адреса автоцентров
+						li
+							a(href="#")
+								+svg('sv-logo')(elem="list-icon")
+								span специальные версии
+						li
+							a(href="#")
+								+svg('search')(elem="list-icon")
+								span поиск
+					a(href="#" elem="lang-toogle") in english
+	+dropdown-menu

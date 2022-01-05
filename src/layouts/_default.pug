@@ -1,0 +1,17 @@
+include ../components/svg/_svg.pug
+
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/vendors.min.css")
+        link(rel="stylesheet", href="css/main.min.css")
+        title Test-2
+    body
+        include ../components/header/_header.pug
+        block content
+        include ../components/fixed-sidebar/_fixed-sidebar.pug
+        include ../components/footer/_footer.pug
+        script(src="js/scripts-min.js")
+        script(src="js/vendors-min.js")

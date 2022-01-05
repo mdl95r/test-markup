@@ -1,0 +1,20 @@
+@import "_vars.scss";
+@import "_base.scss";
+@import "_fonts.scss";
+@import "_common.scss";
+
+@import "blocks/_main.scss";
+@import "../components/dropdown-menu/dropdown-menu";
+@import "../components/dropdown-menu-cars/dropdown-menu-cars";
+@import "../components/page-header/page-header";
+@import "../components/contacts/contacts";
+
+@import "../components/header/header";
+@import "../components/footer/footer";
+
+@import "../components/icons-block/icons-block";
+@import "../components/dealer-block/dealer-block";
+@import "../components/news-block/news-block";
+@import "../components/car-stock-block/car-stock-block";
+@import "../components/hero-block/hero-block";
+@import "../components/fixed-sidebar/fixed-sidebar";

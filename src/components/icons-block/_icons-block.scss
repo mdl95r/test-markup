@@ -1,0 +1,92 @@
+.icons-block {
+	.container-fluid {
+		padding: 0;
+		@media (min-width: $sm) and (max-width: $lg){
+			max-width: 100%;
+		}
+		@media (min-width: $xl) {
+			padding: 0 65px;
+		}
+	}
+	&__icon-item {
+		display: flex;
+		align-items: center;
+		padding: 23px 36px 25px 25px;
+		&:hover {
+			svg {
+				fill: $color-green;
+				transition: .3s;
+			}
+			.icons-block__text {
+				color: $color-green;
+			}
+		}
+		&:not(:last-child) {
+			border-bottom: 1px solid $bg-white;
+			@media (min-width: $xl) {
+				border-bottom: none;
+			}
+		}
+		@media (min-width: $md) {
+			&:not(:last-child) {
+				border-right: 1px solid $bg-white;
+			}
+		}
+		@media (min-width: $xl) {
+			align-items: flex-start;
+			flex-direction: column;
+			padding: 31px 36px 34px 25px;
+			&:not(:last-child) {
+				border-right: 1px solid $bg-white;
+			}
+		}
+		svg {
+			width: 30px;
+			height: 30px;
+			margin-right: 31px;
+			fill: #0C121C;
+			@media (min-width: $xl) {
+				width: 45px;
+				height: 45px;
+				margin-right: 0;
+				margin-bottom: 27px;
+			}
+		}
+	}
+	&__title {
+		position: relative;
+		font-size: 16px;
+		font-weight: 600;
+		letter-spacing: 0.8px;
+		text-transform: uppercase;
+		line-height: 16px;
+		padding-left: 15px;
+		&:after {
+            display: block;
+            position: absolute;
+            top: 5px;
+            left: 0px;
+            transform: rotate(45deg);
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-top: 1px solid $color-green;
+            border-right: 1px solid $color-green;
+        }
+		@media (min-width: $xl) {
+			margin-bottom: 10px;
+		}
+	}
+	&__text {
+		display: none;
+		font-family: $font-family-second;
+		color: $color-grey;
+		font-size: 14px;
+		font-weight: 450;
+		letter-spacing: 0.28px;
+		line-height: 18px;
+		@media (min-width: $xl) {
+			display: block;
+		}
+	}
+}

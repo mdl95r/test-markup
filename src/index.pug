@@ -1,0 +1,14 @@
+extends layouts/_default.pug
+include components/icons-block/_icons-block.pug
+include components/dealer-block/_dealer-block.pug
+include components/news-block/_news-block.pug
+include components/car-stock-block/_car-stock-block.pug
+include components/hero-block/_hero-block.pug
+
+block content 
+	main.main
+		+hero-block
+		+car-stock-block
+		+news-block
+		+dealer-block
+		+icons-block

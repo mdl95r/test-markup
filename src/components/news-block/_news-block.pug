@@ -1,0 +1,36 @@
+mixin news-block
+	-
+		const news = [
+			{
+				img: 'news_1',
+				title: 'сервисный пакет для land rover',
+				text: '120 000 км или три раза вокруг земли до ближайшего платежа по ТО',
+			},
+			{
+				img: 'news_2',
+				title: 'открывая россию',
+				text: 'В 2013 году компания Jaguar Land Rover запустила увлекательный проект «Открывая Россию» — серию экспедиций по самым живописным и удивительным местам нашей страны.',
+			},
+			{
+				img: 'news_3',
+				title: 'зимняя коллекция шин, дисков и колёс в сборе',
+				text: 'При покупке комплекта зимних шин — шиномонтаж в подарок!',
+			},
+			{
+				img: 'news_4',
+				title: 'задумали? воплощайте!',
+				text: 'Приобретите оригинальные аксессуары Land Rover с выгодой до 80% до 31 марта 2020 года. Ограниченное предложение.',
+			},
+		]
+	section(block="news-block")
+		.container-fluid
+			h2(elem="title") новости и предложения
+			.swiper-container
+				ul.swiper-wrapper(elem="list")
+					each item in news
+						li.swiper-slide(elem="item")
+							img(src=`img/resources/news/${item.img}.jpg`, alt="" elem="item-img")
+							h4(elem="item-title") #{item.title}
+							p(elem="item-text") #{item.text}
+							a.button__link(elem="item-btn" href="#") подробнее
+				.swiper-pagination

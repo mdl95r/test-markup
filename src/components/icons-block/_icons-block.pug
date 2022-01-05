@@ -1,0 +1,30 @@
+mixin icons-block
+	-
+		const iconsBlock = [
+			{
+				icon: 'car3', 
+				title: 'автомобили в наличии',
+				text: 'Выберите свой автомобиль уже сегодня',
+			},{
+				icon: 'rudder2', 
+				title: 'заказ тест-драйва',
+				text: 'Запишитесь на тест-драйв нового Land Rover',
+			},{
+				icon: 'repair2', 
+				title: 'запись на сервис',
+				text: 'Выберите удобное время для посещения',
+			},{
+				icon: 'wheel', 
+				title: 'Запасные части',
+				text: 'Оригинальные запасные части в наличии',
+			},
+		]
+	section(block="icons-block")
+		.container-fluid
+			div(elem="items")
+				.row.mx-0
+					each item in iconsBlock
+						a.col-md-6.col-lg-3(elem="icon-item" href="#")
+							+svg(item.icon)
+							div(elem="title") #{item.title}
+							div(elem="text") #{item.text}
